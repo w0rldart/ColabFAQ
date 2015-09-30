@@ -1,0 +1,33 @@
+{% macro render_field_with_errors(field, icon) %}
+
+    {% if field.errors %}
+    <div class="field error">
+        <div class="ui left icon input">
+            {% if icon %}
+                <i class="{{ icon }} icon"></i>
+            {% endif %}
+
+            {{ field(placeholder=field.description, **kwargs)|safe }}
+        </div>
+        <!-- <div class="ui red pointing prompt label transition visible">
+            {% for error in field.errors %}
+                {{ error }}
+            {% endfor %}
+        </div> -->
+    </div>
+    {% else %}
+    <div class="field">
+        <div class="ui left icon input">
+            {% if icon %}
+                <i class="{{ icon }} icon"></i>
+            {% endif %}
+
+            {{ field(placeholder=field.description, **kwargs)|safe }}
+        </div>
+    </div>
+    {% endif %}
+{% endmacro %}
+
+{% macro render_field(field) %}
+    <p>{{ field(**kwargs)|safe }}</p>
+{% endmacro %}

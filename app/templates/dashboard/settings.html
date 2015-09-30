@@ -1,0 +1,45 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div class="ui container">
+    <div class="grid">
+        <div class="ui raised padded segment">
+            <h1 class="ui header">
+                My settings
+            </h1>
+            <form action="/user" method="post" class="ui form">
+                <h4 class="ui dividing header">Your details</h4>
+                <div class="field">
+                    <label>Name</label>
+                    <div class="two fields">
+                        <div class="field">
+                            <input type="text" name="first_name" placeholder="First Name" value="{{ current_user.first_name }}">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="last_name" placeholder="Last Name" value="{{ current_user.last_name }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Details</label>
+                    <div class="two fields">
+                        <div class="field">
+                            <input type="text" name="email" placeholder="First Name" value="{{ current_user.email }}">
+                        </div>
+                        <div class="field">
+                            {% if current_user.company %}
+                            <input type="text" name="company" placeholder="Last Name" value="{{ current_user.company }}">
+                            {% else %}
+                            <a href="/company" class="ui basic button">
+                                <i class="icon plus"></i>
+                                Add company
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+THEME: http://demo3.pressapps.co/lmspress/?utm_referrer=http%3A%2F%2Fthemeforest.net%2Fitem%2Flms-press-learning-management-system-wp-theme%2Ffull_screen_preview%2F10800047
+
+http://themes.getbootstrap.com/products/application
+
+ - https://github.com/braintree/braintree_python_guide
+ - https://stripe.com/docs/checkout/guides/flask
+ - https://www.jeffknupp.com/blog/2014/01/18/python-and-flask-are-ridiculously-powerful/
+
+
+Project name: Collaborative information
+
+   * Features:
+        \-> As a user you can create:
+                 - Companies
+                 - Events (assigned to yourself or a company)
+                 - FAQs for each event
+
+
+
+RENAME Field:
+    http://docs.mongodb.org/manual/reference/operator/update/rename/
+    http://docs.mongodb.org/manual/reference/command/renameCollection/#dbcmd.renameCollection
+
+    http://docs.mongoengine.org/upgrade.html
+
+    http://shekhargulati.com/2012/02/07/how-to-rename-field-in-all-the-mongodb-documents/
+    http://blog.shlomoid.com/2011/08/how-to-fix-erroneously-named-mongodb.html
+
+    http://stackoverflow.com/questions/9254351/how-can-i-rename-a-field-for-all-documents-in-mongodb
+    http://stackoverflow.com/questions/4973095/mongodb-how-to-change-the-type-of-a-field
+
+
+https://github.com/humiaozuzu/awesome-flask
+http://tinger.herokuapp.com/

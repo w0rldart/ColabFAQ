@@ -1,0 +1,39 @@
+{% if security.registerable or security.recoverable or security.confirmable %}
+<div class="ui segment">
+    <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+            {% if request.path != url_for_security('login') %}
+            <div class="column">
+                <a href="{{ url_for_security('login') }}{% if 'next' in request.args %}?next={{ request.args.next|urlencode }}{% endif %}">
+                    Login
+                </a>
+            </div>
+            {% endif %}
+
+            {% if security.registerable and request.path != url_for_security('register') %}
+            <div class="column">
+                <a href="{{ url_for_security('register') }}{% if 'next' in request.args %}?next={{ request.args.next|urlencode }}{% endif %}">
+                    Register
+                </a>
+            </div>
+            {% endif %}
+
+            {% if security.recoverable %}
+            <div class="column">
+                <a href="{{ url_for_security('forgot_password') }}">
+                    Reset password
+                </a>
+            </div>
+            {% endif %}
+
+            {% if security.confirmable %}
+            <div class="column">
+                <a href="{{ url_for_security('send_confirmation') }}">
+                    Confirm account
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endif %}

@@ -1,0 +1,23 @@
+{
+  "name": "faqColab",
+  "version": "0.0.1",
+  "authors": [
+    "Alex Budurovici <alleksesp@gmail.com>"
+  ],
+  "moduleType": [
+    "es6"
+  ],
+  "license": "AGPL-3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "react": "~0.13.3",
+    "typewriter": "*"
+  }
+}

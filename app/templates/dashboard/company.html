@@ -1,0 +1,32 @@
+{% extends "template.html" %}
+
+{% block content %}
+    <div class="ui main container">
+        <h1 class="ui header">
+            Dashboard
+        </h1>
+        {% if company %}
+            {{ company }}
+        {% else %}
+            <p>
+                You have no company associated
+            </p>
+
+            <form action="/user" method="post" class="ui form">
+                <h4 class="ui dividing header">Your details</h4>
+                <div class="field">
+                    <label>Name</label>
+                    <div class="field">
+                        <input type="text" name="name" placeholder="First Name" value="{{ company.name }}">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <div class="field">
+                        <textarea type="text" name="description" placeholder="Description">{{ company.description }}"</textarea>
+                    </div>
+                </div>
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

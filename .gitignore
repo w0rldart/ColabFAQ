@@ -1,0 +1,17 @@
+*.pyc
+*.pyo
+app.db
+search.db
+*.mo
+
+## Public assets
+static/scripts.js
+static/styles.css
+
+## Development resources
+boilerplate/node_modules/
+boilerplate/bower_components/
+
+## App stuff
+flask/
+env.py

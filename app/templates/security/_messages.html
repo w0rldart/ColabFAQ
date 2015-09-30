@@ -1,0 +1,18 @@
+{%- with messages = get_flashed_messages(with_categories=true) -%}
+    {% if messages %}
+        <div class="ui info message">
+            <i class="close icon"></i>
+            <ul class="list">
+                {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            <p>You may now log-in with the username you have chosen</p>
+        </div>
+        <!-- <ul class="flashes">
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul> -->
+    {% endif %}
+{%- endwith %}

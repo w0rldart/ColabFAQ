@@ -1,0 +1,50 @@
+{% extends "template.html" %}
+
+{% block content %}
+{% from "security/_macros.html" import render_field_with_errors %}
+<div class="ui middle aligned center aligned grid" style="padding-top: 80px;">
+    <div class="column" style="max-width: 450px;">
+        <h2 class="ui teal image header">
+            Log-in to your account
+        </h2>
+
+        {% include "security/_messages.html" %}
+
+        <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form" class="ui large form {% if login_user_form.errors|length > 0 %} {{ 'error' }} {% endif %}">
+            {{ login_user_form.hidden_tag() }}
+
+            <div class="ui stacked segment">
+                {{ render_field_with_errors(login_user_form.email, 'mail outline') }}
+                {{ render_field_with_errors(login_user_form.password, 'lock') }}
+
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="remember" tabindex="0" value="y" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                </div>
+
+                {% if login_user_form.errors|length > 0 %}
+                <div class="ui error message">
+                    <ul class="list">
+                        {% if login_user_form.errors.email is defined and login_user_form.errors.email[0] == "Email requires confirmation." %}
+                        <li>
+                            {{ login_user_form.errors.email[0] }}
+                        </li>
+                        {% else %}
+                        <li>
+                            Invalid email and/or password.
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                <button id="submit" class="ui fluid large teal submit button" name="submit" type="submit"> Login </button>
+            </div>
+        </form>
+
+        {% include "security/_menu.html" %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+# Specifies only dev-specific requirements
+# But imports the common ones too
+-r common.txt
+Flask-DebugToolbar==0.10.0
+Flask-Testing==0.4.2
+python-dateutil==2.4.2

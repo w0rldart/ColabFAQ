@@ -1,0 +1,114 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div class="ui container">
+    <div class="ui two column grid">
+        <div class="four wide column">
+            <div class="ui special card">
+                <div class="blurring dimmable image">
+                    <div class="ui dimmer">
+                        <div class="content">
+                            <div class="ui center">
+                                <div class="ui inverted button" id="change-profile-image">Change Image</div>
+                                <br/><br/>
+                                <div class="ui inverted button">
+                                    <a href="/settings">
+                                        <i class="edit icon"></i>
+                                        Edit Profile
+                                    </a>
+                                </div>
+                                <input type="file" id="profile-image-input" style="display: none">
+                            </div>
+                        </div>
+                    </div>
+                    <img src="{{ current_user.profile.avatar}}">
+                </div>
+                <div class="content">
+                    <a class="header">{{ current_user }}</a>
+                    <div class="meta">
+                        <span class="date">Joined in {{ current_user.registered_at.strftime('%Y') }}</span>
+                    </div>
+                    <div class="description">
+                        Kristy is an art director living in New York.
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui fluid vertical menu">
+                <div class="item">
+                    <div class="ui input"><input type="text" placeholder="Search..."></div>
+                </div>
+                <div class="item">
+                    Home
+                    <div class="menu">
+                        <a class="active item">Search</a>
+                        <a class="item">Add</a>
+                        <a class="item">Remove</a>
+                    </div>
+                </div>
+                <a class="item">
+                    <i class="grid layout icon"></i> Browse
+                </a>
+                <a class="item">
+                    Messages
+                </a>
+                <div class="ui dropdown item">
+                    More
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a class="item"><i class="globe icon"></i> Choose Language</a>
+                        <a class="item"><i class="settings icon"></i> Account Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="twelve wide column">
+            <div class="ui raised padded segment">
+                <h1 class="ui header">
+                    Dashboard
+                </h1>
+
+                <!-- <div class="" style="clear:both"> -->
+                    <div class="ui two column grid basic segment">
+                        <div class="center aligned column">
+                            <a href="/faq/create" class="ui big labeled icon button">
+                                <i class="plus icon"></i>
+                                New FAQ
+                            </a>
+                        </div>
+
+                        <div class="ui vertical divider">
+                            OR
+                        </div>
+
+                        <div class="center aligned column">
+                            <a href="/event/create" class="ui big labeled icon button">
+                                <i class="plus icon"></i>
+                                New Event
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="ui three cards">
+                        <a class="card" href="http://www.dog.com">
+                            <div class="image">
+                                <i class="massive plus icon"></i>
+                                <h4 class="ui header">
+                                    Event
+                                </h4>
+                                <div class="header">Cute Dog</div>
+                                <div class="meta">
+                                    <span class="category">Animals</span>
+                                </div>
+                                <div class="description">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
