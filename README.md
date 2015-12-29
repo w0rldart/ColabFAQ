@@ -1,5 +1,5 @@
-# flask-faqs
-FAQs system build upon the Flask Python microframework
+# FAQ Colab
+FAQs colaborative system built on Flask
 
 # Requirements
  - pip
