@@ -1,11 +1,11 @@
 Flask==0.10.1
 Flask-Mail==0.9.1
-flask-mongoengine==0.7.1
-Flask-PyMongo==0.3.1
-Flask-Security==1.7.4
+flask-mongoengine==0.7.5
+Flask-PyMongo==0.4.0
+Flask-Security==1.7.5
 Flask-Script==2.0.5
 Flask-WTF==0.12
-coverage==3.7.1
+coverage==4.0.3
 flipflop==1.0
-mongoengine==0.10.0
-wsgiref==0.1.2
+mongoengine==0.10.5
+uWSGI==2.0.12

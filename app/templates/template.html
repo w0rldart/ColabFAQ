@@ -12,7 +12,7 @@
         <div class="ui large top fixed menu">
             <div class="ui container">
                 <a href="/" class="item">Home</a>
-                {% if current_user.is_authenticated() %}
+                {% if current_user.is_authenticated %}
                 <a class="item button">
                     <div class="ui labeled icon button">
                         <i class="plus icon"></i>
@@ -27,7 +27,7 @@
                 </a>
                 {% endif %}
                 <div class="right menu">
-                    {% if current_user.is_authenticated() %}
+                    {% if current_user.is_authenticated %}
                     <div class="ui dropdown item">
                         {{ current_user }} <i class="dropdown icon"></i>
                         <div class="menu">
