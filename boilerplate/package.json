@@ -38,7 +38,7 @@
     "react": "^0.13.3",
     "reactify": "^1.1.1",
     "require-dot-file": "^0.4.0",
-    "semantic-ui": "^2.0.2",
+    "semantic-ui": "^2.1.8",
     "yamljs": "^0.2.3"
   }
 }
