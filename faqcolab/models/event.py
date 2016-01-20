@@ -1,5 +1,5 @@
 import datetime
-from app.models import db, FlaskDocument
+from faqcolab.models import db, FlaskDocument
 
 class Event(FlaskDocument):
     name          = db.StringField(max_length=64, required=True)

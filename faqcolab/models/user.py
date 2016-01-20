@@ -1,6 +1,6 @@
 import datetime
 from flask.ext.security import UserMixin, RoleMixin
-from app.models import db, FlaskDocument
+from faqcolab.models import db, FlaskDocument
 
 class Role(FlaskDocument, RoleMixin):
     name          = db.StringField(required=True, unique=True)

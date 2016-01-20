@@ -40,7 +40,7 @@ class BaseConfig(object):
         self.SECURITY_CONFIRMABLE = True
 
         # DB settings
-        self.MONGODB_SETTINGS = {'DB': "faqColab"}
+        self.MONGODB_SETTINGS = {'DB': "faqcolab"}
 
 
 class DevelopmentConfig(BaseConfig):
@@ -60,7 +60,7 @@ class DevelopmentConfig(BaseConfig):
         self.MAIL_USERNAME = None
         self.MAIL_PASSWORD = None
 
-        self.MONGODB_SETTINGS = {'DB': "local_faqColab"}
+        self.MONGODB_SETTINGS = {'DB': "local_faqcolab"}
 
 
 class ProductionConfig(BaseConfig):
@@ -88,7 +88,7 @@ class TestingConfig(BaseConfig):
         self.BCRYPT_LOG_ROUNDS = 1
         self.WTF_CSRF_ENABLED = False
 
-        self.MONGODB_SETTINGS = {'DB': "testing_faqColab"}
+        self.MONGODB_SETTINGS = {'DB': "testing_faqcolab"}
 
 
 if environment == 'testing':

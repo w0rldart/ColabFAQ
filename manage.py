@@ -9,7 +9,7 @@ from flask.ext.script.commands import Server, Shell, ShowUrls, Clean
 from flask.ext.security.script import CreateUserCommand, AddRoleCommand,\
     RemoveRoleCommand, ActivateUserCommand, DeactivateUserCommand
 
-from app import factory
+from faqcolab import factory
 from script import ResetDB, PopulateDB
 
 app = factory.create_app()

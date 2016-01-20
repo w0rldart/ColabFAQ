@@ -7,19 +7,18 @@ from flask.ext.security import Security
 
 from flask_mail import Mail
 
-from app.models import db, user_datastore
-from app.routes.frontend import register_routes as register_frontend_routes
-from app.routes.dashboard import register_routes as register_dashboard_routes
-from app.forms.user import ExtendedLoginForm, ExtendedRegisterForm
+from faqcolab.models import db, user_datastore
+from faqcolab.routes.frontend import register_routes as register_frontend_routes
+from faqcolab.routes.dashboard import register_routes as register_dashboard_routes
+from faqcolab.forms.user import ExtendedLoginForm, ExtendedRegisterForm
 
 # from flask.ext.debugtoolbar import DebugToolbarExtension
-
 
 def create_app():
     app = Flask(__name__)
 
     # load configuration
-    app.config.from_object('app.config.app_config')
+    app.config.from_object('faqcolab.config.app_config')
 
     db.init_app(app)
     # toolbar  = DebugToolbarExtension(app)

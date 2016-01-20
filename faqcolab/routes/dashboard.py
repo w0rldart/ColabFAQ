@@ -1,6 +1,6 @@
 from flask import render_template, redirect
 from flask.ext.security import login_required, current_user
-from app.models import Company, Event, Faq
+from faqcolab.models import Company, Event, Faq
 
 def register_routes(app):
     @app.route('/dashboard')

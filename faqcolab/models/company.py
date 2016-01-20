@@ -1,11 +1,11 @@
 import datetime
-from app.models import db, FlaskDocument
+from faqcolab.models import db, FlaskDocument
 
-class Faq(FlaskDocument):
+class Company(FlaskDocument):
     name        = db.StringField(max_length=64, required=True)
     description = db.StringField(required=True)
-    private     = db.BooleanField(default=False)
-    event       = db.ReferenceField('Event')
+    author      = db.ReferenceField('User')
+    members     = db.ListField(db.ReferenceField('User'), default=[])
     created_at  = db.DateTimeField(default=datetime.datetime.utcnow())
 
 
