@@ -9,7 +9,7 @@
 # PATH = os.path.dirname(os.path.realpath(__file__))
 # sys.path.insert(0, PATH)
 
-from faqcolab import factory
+from colabfaq import factory
 
 app = factory.create_app()
 

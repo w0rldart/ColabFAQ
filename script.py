@@ -1,7 +1,7 @@
 from flask.ext.script import Command
 from flask.ext.security.confirmable import confirm_user
 
-from faqcolab.models import FlaskDocument, db, user_datastore
+from colabfaq.models import FlaskDocument, db, user_datastore
 
 
 class ResetDB(Command):

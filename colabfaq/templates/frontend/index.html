@@ -1,0 +1,45 @@
+{% extends "template.html" %} {% block content %}
+<!-- Page Contents -->
+<div class="ui vertical center aligned segment full-height" id="homepage-search">
+    <div class="overlay"></div>
+    <div class="ui text container">
+        <h1 class="ui header">
+            Search for an <strong>FAQ</strong>
+        </h1>
+        <form action="GET" target="/search" id="search-box">
+            <div class="ui fluid huge icon input">
+                <input type="text" placeholder="Search by location or name" id="search-input">
+                <i class="circular search link icon"></i>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="ui vertical stripe segment">
+    <div class="ui center aligned text container" style="margin: 20px;">
+          <h1 class="ui huge header" style="text-transform: uppercase; font-weight: bold;">Create an FAQ</h1>
+          <p>Choose a category to start with, for your new FAQ</p>
+    </div>
+</div>
+<div class="ui vertical stripe quote segment" style="padding-top: 0; padding-bottom: 0;">
+    <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+            <div class="white column">
+                <h3>"What a Company"</h3>
+                <p>That is what they all say about us</p>
+            </div>
+            <div class="white column">
+                <h3>"What a Company"</h3>
+                <p>That is what they all say about us</p>
+            </div>
+            <div class="white column">
+                <h3>"What a Company"</h3>
+                <p>That is what they all say about us</p>
+            </div>
+            <div class="white column">
+                <h3>"What a Company"</h3>
+                <p>That is what they all say about us</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

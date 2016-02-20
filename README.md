@@ -25,3 +25,6 @@ For an Nginx with uWSGI environment, have a look into etc directory for config f
  - Build Semantic UI assets `cd vendor/semantic/ && gulp build`
  - Back to root boilerplate to build our assets `cd ../../ && gulp build`
  - List all available commands by executing `gulp help`
+
+
+https://github.com/web2py/web2py/blob/master/scripts/setup-web2py-nginx-uwsgi-ubuntu.sh

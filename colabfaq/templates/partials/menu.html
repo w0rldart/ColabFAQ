@@ -1,0 +1,64 @@
+<!-- Following Menu -->
+<div class="ui large top fixed menu">
+    <div class="ui container">
+        <a class="toc item">
+            <i class="sidebar icon"></i>
+        </a>
+        <a href="/" class="item">
+            Home
+        </a>
+        {% if current_user.is_authenticated %}
+        <a class="item button">
+            <div class="ui labeled icon button">
+                <i class="plus icon"></i>
+                FAQ
+            </div>
+        </a>
+        <a class="item button">
+            <div class="ui labeled icon button">
+                <i class="plus icon"></i>
+                Event
+            </div>
+        </a>
+        {% endif %}
+        <div class="right menu">
+            {% if current_user.is_authenticated %}
+            <div class="ui dropdown item">
+                {{ current_user }} <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="{{ url_for('dashboard') }}" class="item">
+                        Dashboard
+                    </a>
+                    <a href="{{ url_for('company') }}" class="item">
+                        Company
+                    </a>
+                    <a href="{{ url_for('settings') }}" class="item">
+                        Settings
+                    </a>
+                    <div class="divider"></div>
+                    <a href="{{ url_for('logout') }}" class="item">
+                        Logout
+                    </a>
+                </div>
+            </div>
+            {% else %}
+            <div class="item">
+                <a href="{{ url_for_security('login') }}" class="ui button">Log in</a>
+            </div>
+            <div class="item">
+                <a href="{{ url_for_security('register') }}" class="ui primary button">Register</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu left">
+    <a class="active item">Home</a>
+    <a class="item">Work</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <a class="item">Login</a>
+    <a class="item">Signup</a>
+</div>

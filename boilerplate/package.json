@@ -1,44 +1,65 @@
 {
-  "name": "CrowdFAQ",
+  "name": "ColabFAQ",
   "description": "Build tools for the project",
   "version": "0.0.1",
   "author": {
     "name": "Alexandru Budurovici",
-    "web": "http://w0rldart.com/"
+    "web": "https://w0rldart.com/"
   },
-  "homepage": "http://w0lrdart.com/portfolio/CrowdFAQ",
+  "homepage": "https://w0lrdart.com/portfolio/colabfaq",
   "repository": {
     "type": "git",
-    "url": "https://github.com/w0rldart/CrowdFAQ.git"
+    "url": "https://github.com/w0rldart/colabfaq.git"
   },
   "license": "AGPL-3.0",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.12"
   },
   "dependencies": {
     "better-console": "^0.2.4",
-    "browserify": "^11.0.1",
+    "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-chmod": "^1.2.0",
     "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
     "gulp-header": "^1.2.2",
     "gulp-help": "^1.6.0",
     "gulp-less": "^3.0.3",
-    "gulp-minify-css": "^0.5.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
     "gulp-plumber": "^0.6.6",
     "gulp-print": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.3",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
-    "gulp-watch": "^4.2.4",
-    "map-stream": "0.0.6",
-    "react": "^0.13.3",
+    "gulp-watch": "^4.3.5",
+    "jquery": "^2.2.0",
+    "react": "^0.14.6",
     "reactify": "^1.1.1",
-    "require-dot-file": "^0.4.0",
+    "run-sequence": "^1.1.5",
     "semantic-ui": "^2.1.8",
-    "yamljs": "^0.2.3"
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "semantic-ui": "./node_modules/semantic-ui/dist/semantic.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": {
+      "exports": "$"
+    },
+    "semantic-ui": {
+      "depends": "jquery"
+    }
   }
 }

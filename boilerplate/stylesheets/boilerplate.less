@@ -1,22 +1,104 @@
 @import (less) "../vendor/semantic/dist/semantic.css";
-
 body {
-    background: #f0f0f0;
 }
 
-.container > .grid {
-    padding-top: 90px;
+.hidden.menu {
+    display: none;
 }
 
-.ui.menu .item img.logo {
-    margin-right: 1.5em;
+.ui.menu .ui.button {
+    margin-left: 0.5em;
 }
-.main.container {
-    margin-top: 7em;
+
+.top.fixed.menu .toc.item {
+    display: none;
 }
-.wireframe {
-    margin-top: 2em;
+
+@media only screen and (max-width: 700px) {
+    .ui.fixed.menu {
+        display: none !important;
+    }
+
+    .top.fixed.menu .item,
+    .top.fixed.menu .menu {
+        display: none;
+    }
+
+    .top.fixed.menu .toc.item {
+        display: block;
+    }
+
+    #homepage-search h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+    }
 }
+
+.full-height {
+    width: 100%;
+    padding: 0 7%;
+    display: table;
+    margin: 0;
+    max-width: none;
+    height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    height: 98%;
+    width: 100%;
+    z-index: 10;
+}
+
+#homepage-search {
+    background: url('/static/images/sky-sunset-night-space-min.jpeg') no-repeat center;
+    background-size: 100%;
+    margin-top: 41px;
+
+    .ui.text.container {
+        position: relative;
+        z-index: 20;
+
+        h1.ui.header {
+            margin-top: 3em;
+            margin-bottom: 0.5em;
+            font-size: 3.5em;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        #search-box {
+            -webkit-transition: all 1.5s;
+            -moz-transition: all 1.5s;
+            -o-transition: all 1.5s;
+            transition: all 1.5s;
+
+            #search-input:focus {
+                box-shadow: 0px 5px 10px #000;
+            }
+        }
+    }
+}
+#homepage-create {
+    background: url('/static/images/sky-sunset-night-space-min.jpeg') no-repeat center;
+    background-size: 100%;
+}
+
+// .container > .grid {
+//     padding-top: 90px;
+// }
+// .ui.menu .item img.logo {
+//     margin-right: 1.5em;
+// }
+// .main.container {
+//     margin-top: 7em;
+// }
+// .wireframe {
+//     margin-top: 2em;
+// }
+
 .ui.footer.segment {
     margin: 5em 0em 0em;
     padding: 5em 0em;

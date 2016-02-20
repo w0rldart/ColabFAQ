@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"> {% if title %}
+    <title>{{ title }} - CoFAQs</title>
+    {% else %}
+    <title>Collaborative FAQs</title>
+    {% endif %}
+</head>
+<body>
+    {% include 'partials/menu.html' %}
+    <div class="pusher">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>
+                    {{ message }}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% include 'partials/footer.html' %}
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
