@@ -28,3 +28,6 @@ For an Nginx with uWSGI environment, have a look into etc directory for config f
 
 
 https://github.com/web2py/web2py/blob/master/scripts/setup-web2py-nginx-uwsgi-ubuntu.sh
+
+https://github.com/cburmeister/flask-bones
+https://github.com/imwilsonxu/fbone
